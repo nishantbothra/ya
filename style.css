@@ -1,0 +1,126 @@
+@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap); 
+body { 
+    padding: 0; 
+    margin: 0px; 
+    background: linear-gradient(white 40%, rgb(132, 187, 206) 70%);
+    font-family: 'Josefin Sans', sans-serif; 
+} 
+header { 
+        background-color: chocolate; 
+        overflow: hidden;
+} 
+#Logo { 
+        font-family: 'Source Code Pro', monospace; 
+} 
+ul { 
+        width: auto; 
+        float: right; 
+        margin-top: 8px; 
+} 
+li { 
+        display: inline-block; 
+} 
+.SE { 
+        text-align: center; 
+        text-decoration: none; 
+        padding: 15px 30px; 
+        color: aliceblue;
+}
+.SE:hover {
+    color: black;
+    background-color: antiquewhite;
+}
+.menu-btn {
+    position: relative;
+    display: flex;
+    float: right;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    justify-content: center;
+    align-items: center;
+}
+.menu-btn_burger {
+    width: 20px;
+    height: 3px;
+    background-color: aliceblue;
+    transition: all .5s ease-in-out;
+}
+.menu-btn_burger::before,
+.menu-btn_burger::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: aliceblue;
+    transition: all .5s ease-in-out;
+}
+.menu-btn_burger::before {
+    transform: translateY(-6px);
+}
+.menu-btn_burger::after {
+    transform: translateY(6px);
+}
+/* ANIMATION */
+.menu-btn.open .menu-btn_burger {
+    transform: translateX(-20px);
+    background: transparent;
+    box-shadow: none;
+}
+.menu-btn.open .menu-btn_burger::before {
+    transform: rotate(50deg) translate(0.1px, -0.1px);
+}
+.menu-btn.open .menu-btn_burger::after {
+    transform: rotate(-50deg) translate(0.1px, 0.1px);
+}
+.S1 {
+    outline: 2px solid black;
+    background-image: url(Nishant.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.S1 {
+    background-image: url(Nishant.png);
+    padding: 190px 100px;
+}
+#tit {
+    position: relative;
+    font-size: 3vw;
+    color: transparent;
+    -webkit-text-stroke: 0.1vw whitesmoke;
+    text-transform: uppercase;
+}
+#tit::before {
+    position: absolute;
+    content: attr(data-text);
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: chocolate;
+    -webkit-text-stroke: 0vw;
+    overflow: hidden;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate {
+    0%,10%,100% {
+        width: 0;
+    }
+    70%,90% {
+        width: 100%;
+    }
+}
+footer {
+    background-color: gray;
+    overflow: hidden;
+}
+.ft {
+    font-weight: 100;
+    font-size: 15px;
+    text-decoration: none;
+    color: aliceblue;
+    text-align: left;
+}
+
